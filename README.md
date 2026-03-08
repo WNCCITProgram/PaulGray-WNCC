@@ -1,83 +1,74 @@
-PaulGray-WNCC
-Fitness Workout Tracker with Progress Visuals
+# PaulGray-WNCC  
+**Fitness Workout Tracker with Progress Visuals**
 
-Hey everyone! 👋
+Hey everyone! 👋  
 
-For my semester project, I'm building a **Fitness / Workout Tracker with Progress Visuals** — a simple yet powerful web app to help users log workouts, track body stats, and visualize their progress over time.
+For my semester project, I'm working on a **Fitness Workout Tracker** — something to help me (and hopefully others) actually stick with workouts by making tracking easy and motivating.  
 
-Why this project?
+### Why this project?  
+I go to the gym pretty regularly, but I always forget what weights I used last time or whether I'm actually getting stronger. Spreadsheets get messy, phone notes are all over the place, and most apps feel either too complicated or paywalled. I wanted something simple I could use myself: log workouts quickly, see my history, and eventually get cool charts showing progress so I stay motivated.  
 
-I love going to the gym, but I often forget what I lifted last time or how I'm progressing (this goes for cardio too). A lot of people (myself included) find it hard to stay consistent with workouts because tracking exercises, sets, reps, weights, cardio, and overall progress is a hassle.
+Right now the goal is a clean, useful app for logging strength training (exercises, sets, reps, weights) with room to grow into body stats, cardio, and visuals later.
 
-My goal is to create an **easy-to-use web app** where users can:
-- Quickly log their workouts
-- Track body stats (weight, measurements, etc.)
-- See beautiful visual progress charts to stay motivated and see how far they've come
+### Current Status (March 2026 Update)  
+Started with a super basic console version in Python back in February — just to figure out how the data should work and what the flow feels like. That version let me log workouts and view them in text, but everything was in memory (gone when I closed the program).
 
-I'm really excited about this because it will be useful for me personally and hopefully for others too!
+**Big step this week:** I turned it into a **GUI desktop app** using Tkinter! Now it actually feels like real software:  
+- Nice window with buttons and a table showing all workouts  
+- Add new workouts (date auto-fills today's, but you can change it)  
+- Edit or delete entries if I mess something up  
+- Basic stats popup (total workouts, unique exercises, total volume lifted, max bench press weight)  
+- Saves everything automatically to a `workouts.json` file so progress doesn't disappear  
 
-Current Status
+It's still Python for now, but this GUI version is way more usable than the console one. Feels like real progress! 💪  
 
-Week 1 Progress (February 2025)**  
-I've started with a **basic console-based prototype** in Python to help me think through the core data structure and user flow before jumping into the full MERN stack. This version includes:
+Current files:  
+- [`workout_tracker.py`](workout_tracker.py) — handles all the data stuff (add, edit, delete, save/load, stats)  
+- [`gui_main.py`](gui_main.py) — launches the actual app window  
 
-- A simple menu interface
-- Ability to log workouts (date, exercise name, sets, reps, optional weight)
-- View all logged workouts in a readable list
-- In-memory storage (list of dictionaries) — saving to file and database will come later
+(Old console version is archived as `main.py` if I ever want to look back.)
 
-This is intentionally very basic so I have room to grow it each week. The Python version is just a proof-of-concept / planning tool — the final project will be a full web app using the MERN stack.
+### Final Goals (by end of semester)  
+- Switch everything over to full **MERN stack** web app  
+- User accounts (sign up / login)  
+- Log strength workouts + maybe cardio sessions  
+- Track body stats (weight, measurements, etc.)  
+- Multiple progress charts (weight over time, max lifts, volume trends) using Chart.js  
+- Clean, mobile-friendly design with Tailwind CSS  
+- Deploy it somewhere so I can actually use it from my phone  
 
-The code is live here:  
-→ [`main.py`](main.py)  
-→ [`workout_tracker.py`](workout_tracker.py)
+### Technologies (current + planned)  
+**Right now (Python phase):**  
+- Python 3  
+- Tkinter (for the GUI)  
+- JSON file for saving data  
 
-Final Goals (by end of semester)
+**Next phase (web version):**  
+- MERN Stack (MongoDB, Express.js, React, Node.js)  
+- React + Tailwind CSS  
+- Chart.js for visuals  
+- JWT for authentication  
+- Probably React Router, Axios, etc.  
 
-- User authentication (sign up / login with JWT)
-- Workout logging (exercises, sets, reps, weights, cardio sessions)
-- Body stat tracking (weight, body measurements, etc.)
-- Multiple progress charts and visualizations
-- Clean, responsive UI
-- Detailed README with screenshots and (hopefully) a live demo link
+### Resources & Tutorials I've Used  
+- Tkinter basics from Python docs and a couple Real Python articles  
+- JSON handling — straight from Python docs  
+- Some YouTube videos on building simple GUIs in Python  
+- Planning ahead: MERN full-stack tutorials (especially the exercise tracker ones on YouTube)  
+- Chart.js docs for when I get to visuals  
 
-Technologies I'll be using
+### AI Help  
+I used Grok (from xAI) a bunch to help figure out the Tkinter layout, add the edit/delete features, and get the JSON saving working smoothly. It saved me a ton of trial-and-error time. All the code decisions and structure are still mine, but credit where it's due — thanks Grok!
 
-- **MERN Stack** (MongoDB, Express.js, React, Node.js)
-- **React** + **Tailwind CSS** for the frontend
-- **Chart.js** for beautiful progress charts
-- **JWT** for authentication
-- Possibly more as I go (like React Router, Axios, etc.)
+### Next Steps  
+In the next couple weeks I want to:  
+- Add better date picking/validation  
+- Maybe a simple progress chart in Python (matplotlib?) as a test  
+- Start the React frontend setup  
+- Clean up the UI a bit more  
 
-(The current Python prototype is just temporary scaffolding — it will be replaced as we move to the web version.)
+I'll keep updating this README with screenshots and new features as I go.  
 
-Resources & Tutorials I'm Following
+Feel free to check it out, run it, or drop feedback!  
 
-I've been looking around for beginner-friendly resources:
-- MERN Stack Basics & Exercise Tracker Tutorial (YouTube)
-- Full MERN Authentication with JWT (YouTube)
-- Charts for Progress → [Chart.js official docs](https://www.chartjs.org/)
-- Tailwind CSS with React (YouTube)
-
-How I'll build it
-
-I'll start small and build incrementally:
-
-1. Basic React frontend setup with Tailwind  
-2. Backend setup (Node/Express + MongoDB)  
-3. User auth  
-4. Workout & stat logging  
-5. Progress charts  
-6. Polish + deployment  
-
-I'll use **AI tools** (like Grok, ChatGPT, etc.) to help with code snippets and debugging, but I'll credit them in comments and in this README.
-
-Progress Screenshots (coming soon!)
-
-*(I'll add screenshots here as I build features — dashboard, workout log, charts, etc.)*
-
-For now, here are some example visuals of what I'm aiming for in the final version:
-
-Feel free to follow my progress, give feedback, or even contribute if you're interested. I'm looking forward to building this and sharing updates!
-
-Happy lifting! 💪
+Happy lifting (and coding)! 💪🏋️‍♂️
